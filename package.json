@@ -14,7 +14,7 @@
   },
   "repository": {
     "type": "git",
-    "url":"https//dashboard.heroku.com/apps/pacific-anchorage-4458/deploy/heroku-git"
+    "url":"https//dashboard.heroku.com/apps/meterexchange/deploy/heroku-git"
   },
   "license": {
     "type": "MIT",
