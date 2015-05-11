@@ -1,0 +1,36 @@
+<div class="container">
+	<div class="row">
+		<div class="col-sm-12 form-name text-left">
+			<form  class="form-horizontal" role="form" action="load_spids.jsp" method="GET" id="loadSpid">
+				<div class="form-group">
+					<label class="col-sm-2 scheduler-border">Customer Name:</label>
+					<div class="col-sm-6">
+						<select name="CustId" id="cust_name_select_list" class="form-control">
+							<option>Please select a name</option>
+							<% for(var i=0; i<retailers.length; i++) { %>
+								<option value="<%=i%>"><%=retailers[i].name%></option>
+
+							<% } %>							
+							<%
+							/*
+								for (Map.Entry<String, String> entry : potentialCustomers.entrySet()) {
+									String key = entry.getKey();
+									if (customerId != null) {
+											%>
+										    <option value="<%=key%>" <%=(key.equals(customerId))?"selected":""%>>
+										    	<%=entry.getValue()%>
+										    </option>
+									<%} else {%>
+										<option value="<%=key%>"><%=entry.getValue()%></option>
+									<%}
+								}
+							*/
+							%>
+
+						</select>
+					</div>
+				</div>					
+			</form>
+		</div>	
+	</div>	
+</div>
