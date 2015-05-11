@@ -47,7 +47,7 @@ jQuery(document).ready(function() {
 
 $("input[name=username").change(function(e){
 	$this = $(this);
-	console.log('change of username');
+	//console.log('change of username');
 	$.ajax({
 	        dataType: 'json',
 	        data: 	$('#signup').serialize(),
@@ -56,10 +56,10 @@ $("input[name=username").change(function(e){
 	        
 	        success: function(responseText) {
 	         
-	         console.log(responseText);		   
+	         //console.log(responseText);		   
 			 if (responseText.userFlag)
 			 {
-			 	console.log('username already exist');
+			 	//console.log('username already exist');
 			 	$this.focus();
 			 	$this.addClass('validationShadow');
 			 	$('.form-group.error').css('display','block');
@@ -68,7 +68,7 @@ $("input[name=username").change(function(e){
 	        	
 	         else {
 	         	$this.removeClass('validationShadow');
-	         	console.log('username is available');
+	         	//console.log('username is available');
 	         	$('.form-group.error').css('display','block');
 	         	$('.errorMessageUser').text('');
 
@@ -76,7 +76,7 @@ $("input[name=username").change(function(e){
 	        },
 	        
 	        error: function(XMLHttpRequest, textStatus, errorThrown) {
-		            console.log('errror errorThrown');
+		            //console.log('errror errorThrown');
 		    
 		     }
 	
@@ -90,7 +90,7 @@ $(".signup.btn").click(function(e){
 
 	$('#signup').validate();
 	
-	console.log('signup');
+	//console.log('signup');
 	var uid   = $( "input[name=username]" ).val(),
 		pwd   = $( "input[name=password]" ).val(),
 		email = $( "input[name=email]" ).val(),
@@ -104,10 +104,10 @@ $(".signup.btn").click(function(e){
 		        
 		        success: function(responseText) {
 		         
-		         console.log(responseText);		   
+		         //console.log(responseText);		   
 				 if (responseText.userFlag)
 				 {
-				 	console.log('check errors !!');
+				 	//console.log('check errors !!');
 				 	$this.focus();
 				 	$this.addClass('validationShadow');
 				 	$('.form-group.error').css('display','block');
@@ -116,7 +116,7 @@ $(".signup.btn").click(function(e){
 		        	
 		         else {
 		         	$this.removeClass('validationShadow');
-		         	console.log('Success !! Please login');
+		         	//console.log('Success !! Please login');
 		         	$('.form-group.error').css('display','block');
 		         	$('.errorMessageUser').text('Success !! Please login');
 
@@ -127,7 +127,7 @@ $(".signup.btn").click(function(e){
 		        },
 		        
 		        error: function(XMLHttpRequest, textStatus, errorThrown) {
-			            console.log('errror errorThrown');
+			            //console.log('errror errorThrown');
 			    
 			     }
 		
@@ -147,7 +147,7 @@ $(".login.btn").click(function(e){
 	}
 	$('#flogin').validate();
 	if( $('#flogin').valid() ){
-		console.log('loginDetail:%s',loginDetail.password);
+		//console.log('loginDetail:%s',loginDetail.password);
 		$.ajax({
 		        dataType: 'json',
 		        data: loginDetail,
@@ -162,7 +162,7 @@ $(".login.btn").click(function(e){
 		        	}
 		        	else{
 		        		currentUrl = returnLastPathSegment();
-		        		console.log('valid user:' + currentUrl);
+		        		//console.log('valid user:' + currentUrl);
 		        		window.location.href = currentUrl + "users/" + uid;
 		        		
 		        	}
@@ -170,7 +170,7 @@ $(".login.btn").click(function(e){
 		        },
 		        
 		        error: function(XMLHttpRequest, textStatus, errorThrown) {
-			            console.log('errror errorThrown');
+			           // console.log('errror errorThrown');
 			    
 			     }
 		});

@@ -14,7 +14,7 @@
   },
   "repository": {
     "type": "git",
-    "url":"https//dashboard.heroku.com/apps/meterexchange/deploy/heroku-git"
+    "url": "https://git.heroku.com/meterexchange.git"  
   },
   "license": {
     "type": "MIT",
