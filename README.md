@@ -1,7 +1,7 @@
 _MeterExchange app with  node.js,MongoDb,Express,AngularJS
 
 ##Description
-UU MeterExchange
+UU MeterExchange - Portal for all the UU POC - Meter Exchange,Gallagher using Open Source Tech Stack.
 This Web App is developed as POC to prototype and demonstrate the Meter Exchange process for the UU customers. For the POC, I have used NodeJS and Express as the middleware. However,for production we may use WSO2/Software AG as the middleware. 
 The three sections will be divided as follows:
 
