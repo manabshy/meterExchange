@@ -4,10 +4,10 @@
 
 <div class="col-sm-12">
 	<div class="row" ng-app="signupApp" ng-controller="signupController" >
-		<div class="col-sm-7 col-sm-push-7">
+		<div class="col-sm-6 col-sm-push-7">
 						 <div class="form-group">
 						    <div class="col-sm-offset-3 col-sm-3">
-								<h3>Login here</h3>
+								<h4>Login here</h4>
 						    </div>
 						 </div>				<% if (error2) { %> <div class="error"><%= error2 %></div><% } %>
 							    
@@ -16,22 +16,22 @@
 
 						 <div class="form-group">
 						    <div class="col-sm-offset-2 col-sm-3">
-						 		<span class="errorMessage"></span>
+						 		
 						    </div>
 						 </div>
 
 						 <div class="form-group" ng-class="{ 'has-error' : login.lusername.$invalid && !login.lusername.$pristine }">
-						    <div class="col-sm-offset-3 col-sm-3">
-						      <input type="text" class="form-control input-sm" name="lusername" placeholder="Username" ng-model="loginData.lusername">
+						    <div class="col-sm-offset-3 col-sm-5">
+						      <input type="text" class="form-control input-md" name="lusername" placeholder="Username" ng-model="loginData.lusername">
 						    </div>
 						 </div>
 						 <div class="form-group" ng-class="{ 'has-error' : login.lpassword.$invalid && !login.lpassword.$pristine }">
-						    <div class="col-sm-offset-3 col-sm-3">
-						      <input type="password" class="form-control input-sm" name="lpassword" placeholder="Password" ng-model="loginData.lpassword">
+						    <div class="col-sm-offset-3 col-sm-5">
+						      <input type="password" class="form-control input-md" name="lpassword" placeholder="Password" ng-model="loginData.lpassword">
 						    </div>
 						 </div>
 						<div class="form-group">
-							<div class="col-sm-offset-3 col-sm-2">
+							<div class="col-sm-offset-3 col-sm-5">
 								  <label for="Company">Select Company</label>
 								  <select class="form-control" id="company">
 								    <option value="RTL002">United Utilities</option>
@@ -40,12 +40,13 @@
 							</div>
 						</div>		
 						 <div class="form-group">
-						    <div class="col-sm-offset-3 col-sm-2">
+						    <div class="col-sm-offset-3 col-sm-5">
 						      <div class="checkbox">
 						        <label>
 						          <input type="checkbox"> Remember me
 						        </label>
 						      </div>
+						      <div class="errorMessage"></div>
 						    </div>
 						 </div>
 						 <div class="form-group">
@@ -57,8 +58,8 @@
 				    
 		</div>
 
-		<div class="col-sm-4 col-sm-pull-7">	
-				<h3> New user registration</h3>		
+		<div class="col-sm-6 col-sm-pull-5">	
+				<h4> New user registration</h4>		
 			    <% if (error1) { %> <div class="error"><%= error1 %></div><% } %>
 
 					<form name="signupForm" role="form" class="form-horizontal" id="signup" action="/signup" method="POST" autocomplete="on" ng-submit="submitForm(signupForm.$valid)" novalidate>
@@ -70,39 +71,39 @@
 						</div>
 						<div class="form-group" ng-class="{ 'has-error' : signupForm.username.$invalid && !signupForm.username.$pristine }">
 						    <div class="col-sm-5">
-						      <input type="text" class="form-control input-sm" name="username" placeholder="Username" ng-model="signupData.username" ng-minlength="3" ng-maxlength="10" required>
+						      <input type="text" class="form-control input-md" name="username" placeholder="Username" ng-model="signupData.username" ng-minlength="3" ng-maxlength="10" required>
 						        <p ng-show="signupForm.username.$error.minlength" class="help-block">Username is too short.</p>
 						        <p ng-show="signupForm.username.$error.maxlength" class="help-block">Username is too long.</p>
 	    					</div>
 						</div>
 						<div class="form-group" ng-class="{ 'has-error' : signupForm.password.$invalid && !signupForm.password.$pristine }">
 						    <div class="col-sm-5">
-						      <input type="password" ng-minlength="5" ng-maxlength="50" class="form-control input-sm" name="password" placeholder="Password" ng-model="signupData.password" required>
+						      <input type="password" ng-minlength="5" ng-maxlength="50" class="form-control input-md" name="password" placeholder="Password" ng-model="signupData.password" required>
 						        <p ng-show="signupForm.password.$error.minlength" class="help-block">Password is minimum five characters long.</p>
 						        <p ng-show="signupForm.password.$error.maxlength" class="help-block">Password is maximum fifty characters long.</p>
 						    </div>
 						</div>
 						<div class="form-group">
 						    <div class="col-sm-5">
-						      <input type="password" class="form-control input-sm" name="confirm" placeholder="Confirm Password" 
+						      <input type="password" class="form-control input-md" name="confirm" placeholder="Confirm Password" 
 						      ng-model="signupData.confirm" >
 						    </div>
 						</div>
 						<div class="form-group" ng-class="{ 'has-error' : signupForm.email.$invalid && !signupForm.email.$pristine }">
 						    <div class="col-sm-5">
-						      <input type="email" class="form-control input-sm" name="email" placeholder="Email" ng-model="signupData.email" >
+						      <input type="email" class="form-control input-md" name="email" placeholder="Email" ng-model="signupData.email" >
 				              <p ng-show="signupForm.email.$invalid && !signupForm.email.$pristine" class="help-block">Enter a valid email.</p>
 
 						    </div>
 						</div>
 						<div class="form-group" ng-class="{ 'has-error' : signupForm.companyId.$invalid && !signupForm.companyId.$pristine }">
 						    <div class="col-sm-5">
-						      <input type="text" class="form-control input-sm" name="companyId" placeholder="RTL002" ng-model="signupData.companyId" >
+						      <input type="text" class="form-control input-md" name="companyId" placeholder="RTL002" ng-model="signupData.companyId" >
 						    </div>
 						</div>
 						<div class="form-group" ng-class="{ 'has-error' : signupForm.company.$invalid && !signupForm.company.$pristine }">
 						    <div class="col-sm-5">
-						      <input type="text" class="form-control input-sm" name="company" placeholder="United Utilities" ng-model="signupData.company" >
+						      <input type="text" class="form-control input-md" name="company" placeholder="United Utilities" ng-model="signupData.company" >
 						    </div>
 						</div>
 

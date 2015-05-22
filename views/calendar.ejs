@@ -1,0 +1,29 @@
+<link rel="stylesheet" type="text/css" media="all" href="custom-style.css" />
+
+<div class="row">
+	<div class="col-sm-12 switch-date text-left">
+		
+			<h4>Confirm the SPID(s) are correct and enter the required Switch Date</h4>
+
+			<form class="form-horizontal" role="form" action="send_switch_request.jsp" method="GET">
+				<div class="form-group">
+
+					<label class="col-sm-2"> Switch Date: </label>
+					<div class="col-sm-2">
+						<input type="text" class="form-control" id="inputField" name="switchDate" required/>
+					</div>
+
+					<div class="col-sm-2">
+						<input type="submit"  class="btn btn-success btn-sm sendSwitchRequest" value="Submit Switch Request" />
+					</div>	
+					<div class="col-sm-12">
+						<span class="validationDateError"></span>
+				    </div>
+				</div>
+			</form>
+			<div id="ackMessage">
+				<p> Submitted Successfully !!!!!</p>
+			</div>
+		
+	</div>
+</div>	
